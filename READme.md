@@ -12,4 +12,4 @@
 
 - Manipular e otimizar imagens vetoriais, bitmaps gráficos e elementos visuais de navegação para web.
 
-- Desenvolver e organizar elementos estruturais de sites
+- Desenvolver e organizar elementos estruturais de sites.
