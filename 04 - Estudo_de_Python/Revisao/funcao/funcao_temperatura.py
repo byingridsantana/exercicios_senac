@@ -3,5 +3,5 @@
 def celsius_fahrenheit(celsius):
     return (celsius * 9/5) + 32
 
-temperatura_fahrenheit = celsius_fahrenheit(25)
-print(f'A temperatura de 25°C é igual a {temperatura_fahrenheit}°F')
+temperatura_fahrenheit = celsius_fahrenheit(30)
+print(f'A temperatura de 30°C é igual a {temperatura_fahrenheit}°F')

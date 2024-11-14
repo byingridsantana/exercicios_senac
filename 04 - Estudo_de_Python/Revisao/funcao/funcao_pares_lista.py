@@ -1,4 +1,4 @@
-#Faça uma funcao que receba uma lista e retorne uma nova lista com os ellementos pares da lista original
+#Faça uma funcao que receba uma lista e retorne uma nova lista com os elementos pares da lista original
 
 def filtrar_pares(lista):
     lista_pares = []  # Lista vazia para armazenar os pares

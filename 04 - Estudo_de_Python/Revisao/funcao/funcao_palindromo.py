@@ -6,15 +6,15 @@ def verificar_palindromo(palavra):
     
     # Verificando se a palavra é igual à sua versão invertida
     if palavra == palavra[::-1]:
-        return "É um palíndromo"
+        return "é um palíndromo"
     else:
-        return "Não é um palíndromo"
+        return "não é um palíndromo"
 
 
 # Testando com uma palavra
 resultado = verificar_palindromo("level")
-print("Resultado:", resultado) 
+print("A palavra level", resultado) 
 
 # Testando com uma palavra que não é palíndromo
 resultado = verificar_palindromo("computer")
-print("Resultado:", resultado)  
+print("A palavra computer", resultado)  
