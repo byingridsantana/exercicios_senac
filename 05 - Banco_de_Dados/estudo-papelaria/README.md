@@ -36,15 +36,13 @@ O modelo físico define a implementação do banco de dados em um sistema gerenc
 
 
 ``` sql
-/*
-Para criar o banco de dados CREATE DATABASE / USE:
-*/
+
+-- Para criar o banco de dados CREATE DATABASE / USE:
+
 CREATE DATABASE papelaria;
 USE papelaria;
 
-/*
-Para criar as tabelas CREATE TABLE:
-*/
+-- Para criar as tabelas CREATE TABLE:
 
 CREATE TABLE produtos (
 id_produto INT AUTO_INCREMENT PRIMARY KEY,  
@@ -91,4 +89,34 @@ ALTER TABLE itens_pedido
 ADD constraint fk_itens_pedido_pk_produtos
 foreign key itens_pedido(id_produto)
 REFERENCES produtos(id_produto);
+
+-- Descreve a estrutura da tabela: 
+DESCRIBE produtos;
+DESCRIBE clientes;
+DESCRIBE pedidos;
+DESCRIBE itens_pedido;
+
+-- Para inserir dados dentro de uma tabela (produtos):
+INSERT INTO produtos(nome, descricao, preco, quantidade, categoria) VALUES ("Mouse","Mouse sem Fio", 45.90, 23, "Informática");
+
+-- Para inserir dados dentro de uma tabela (produtos):
+INSERT INTO produtos(nome, descricao, preco, quantidade, categoria) VALUES ("Caderno Universitário","Caderno com 400 páginas", 25.90, 30, "Escolar");
+
+-- Para inserir dados dentro de uma tabela (clientes):
+INSERT INTO clientes(nome,cpf,endereco, telefone) VALUES ("Avulso","00000000001","Rua Nova","(11) 9999-9999");
+INSERT INTO clientes(nome,cpf,endereco, telefone) VALUES ("Vanessa","00000000002","Rua do Jardim","(11) 2222-2222");
+
+-- Para inserir dados dentro de uma tabela (pedidos):
+INSERT INTO pedidos(data_pedido,id_pedido) VALUES (now(),4);
+
+-- Para inserir dados dentro de uma tabela (itens_pedido):
+INSERT INTO itens_pedido(id_pedido, id_produto, quantidade)
+VALUES (4,2,4);
+
+-- Para mostrar os dados que foram inseridos:
+SELECT * FROM produtos;
+SELECT * FROM clientes;
+SELECT * FROM pedidos;
+SELECT * FROM itens_pedido;
+
 ```
