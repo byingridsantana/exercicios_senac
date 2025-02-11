@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agência de Viagens</title>
+    <link rel="stylesheet" href="style.css">    
+</head>
+<body>
+    <div class="container">
+        <div class="image">            
+        </div>
+        <div class="form-container">
+            <p>Agência de Viagens especializada em viagens de turismo nacional e internacional<br>
+            Oferecemos sempre o melhor pacote de viagem para você e sua família.<br></p>
+            <p>Reviva os melhores momentos da nossa jornada através da nossa galeria de fotos. Cada imagem conta uma história única e traz a 
+                tona as lembranças especiais de cada destino. <a href="/galeria-fotos/fotos.html">Veja nossa galeria de fotos</a>
+            </p>
+
+            <h2>Formulário</h2>
+            <h3>Dados do Passageiro</h3>
+            <form>
+                <label for="nome">Nome Completo: </label>
+                <input type="text" id="nome" name="nome" placeholder="digite seu completo" required><br>
+
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" placeholder="digite seu CPF" required><br>
+
+                <label for="rg">RG:</label>
+                <input type="text" id="rg" name="rg" placeholder="digite seu RG" required><br>
+
+                <label for="data">Data de Nascimento:</label>
+                <input type="date" id="data" name="data" placeholder="digite seu nascimento" min="1940-01-01" max="2025-12-31" required/><br>
+
+                <label for="telefone">Telefone: </label>
+                <input type="text" id="telefone" name="telefone" placeholder="digite seu telefone" required><br>
+
+                <label for="email">Email: </label>
+                <input type="text" id="email" name="email" placeholder="digite seu email" required><br>
+
+                <h3>Dados da Viagem</h3>
+
+                <label for="data-ida">Data da viagem da ida:</label>
+                <input type="date" id="data-ida" name="data-ida" placeholder="data de ida" min="1940-01-01" max="2025-12-31" required/><br>
+
+                <label for="data-volta">Data da viagem de volta:</label>
+                <input type="date" id="data-volta" name="data-volta" placeholder="data de volta" min="1940-01-01" max="2025-12-31" required/><br>
+                
+                <label for="origem">Saindo de:</label>
+                <input type="text" id="origem" name="origem" placeholder="cidade de origem"><br>
+
+                <label for="estado">Estado:</label>
+                <select name="estado">
+                    <option value="" disabled selected>Selecione o Estado</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <!-- Adicione mais opções conforme necessário -->
+                </select><br>
+
+                <label for="destino">Indo para:</label>
+                <input type="text" id="destino" name="destino" placeholder="cidade de destino"><br>
+                <label for="estado">Estado:</label>
+                <select name="estado">
+                    <option value="" disabled selected>Selecione o Estado</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <!-- Adicione mais opções conforme necessário -->
+                </select><br>
+
+              
+                <label for="quantidade">Quantidade de Pessoas:</label>
+                <input type="number" name="quantidade" min="1" value="1"><br>
+
+                <label for="tipoviagem">Tipo de Viagem:</label>
+                <select name="tipoviagem">
+                    <option value="" disabled selected>Escolha o tipo de viagem</option>
+                    <option value="terrestre">Terreste</option>
+                    <option value="aerea">Aérea</option>
+                    <option value="maritima">Marítima</option>
+                </select><br>
+
+                <label for="pacote">Escolha o Pacote e/ou Passagem:</label>
+                <select name="pacote">
+                    <option value="" disabled selected>Escolha o pacote</option>
+                    <option value="pacote">Pacote</option>
+                    <option value="passagem">Passagem</option>
+                    <option value="pacote_passagem">Pacote e Passagem</option>
+                </select><br>
+
+                <label for="hospedagem">Hospedagem:</label><br>
+                <input type="radio" name="hospedagem" value="sim"> Sim
+                <input type="radio" name="hospedagem" value="nao"> Não<br>
+
+                <label for="pensao">Tipo de Pensão:</label>
+                <select name="pensao">
+                    <option value="" disabled selected>Escolha tipo de pensão</option>
+                    <option value="cafe">Café da manhã</option>
+                    <option value="meia_pensao">Meia pensão</option>
+                    <option value="pensao_completa">Pensão completa</option>
+                </select><br>
+
+                <label for="pagamento">Forma de Pagamento:</label>
+                <select name="pagamento">
+                    <option value="" disabled selected>Escolha forma de pagamento</option>
+                    <option value="pix">PIX</option>
+                    <option value="debito">Débito</option>
+                    <option value="credito">Crédito</option>
+                    <option value="boleto">Boleto</option>
+                    <option value="dinheiro">Dinheiro</option>
+                </select><br>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
