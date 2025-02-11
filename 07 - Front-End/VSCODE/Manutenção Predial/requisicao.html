@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manutenção Predial</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 40px;
+            background-color:#f4f4f9;
+            color: #2c2c2c
+        }
+        h1, h2 {
+            text-align: center;
+            color: #0B2559;
+        }
+        table {
+            width: 80%;
+            border:1px solid #ddd;
+            margin-bottom:20px;
+            margin-top:20px;
+            text-align: left;
+            margin: 20px auto;
+        }
+        th,td{
+            padding:8px;
+            border:1px solid #ddd;
+        }
+        th{
+            background-color: #0B2559;
+            color:white;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0. 1);
+            margin-top: 20px;
+        }
+
+        label {
+            display:block;
+            margin: 10px 5px;
+        }
+        input[type="nome"], input[type="email"], input[type="tel"], input[type="endereco"], input[type="rg"], input[type="cpf"], input[type="data"]{
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"]{
+            background-color: #0B2559;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;      
+         
+        }
+        input[type="submit"]:hover{
+            background-color: #0B2559;
+            
+        }
+        .center-button{
+            text-align:center;
+            margin-top:20px;
+        }
+        input[type="date"]::-webkit-calendar-picker-indicator{
+            
+            border-radius:50%;
+            padding: 5px;
+            cursor:pointer;
+            font-size: 20px;
+        }
+        
+        .material-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .material-item input[type="checkbox"] {
+            margin-right: 10px;
+        }
+
+        .material-item input[type="number"] {
+            width: 60px;
+            padding: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+
+        .material-item input[type="number"]:focus {
+            outline: none;
+            border-color: #007BFF;
+        }
+
+        textarea{
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Manutenção Predial</h2>
+    
+    <table>
+        <tr>
+            <th>Material</th>
+            <th>Valor Unitario</th>
+        </tr>
+        <tr>
+            <td>Telha</td>
+            <td>R$100,00</td>
+        </tr>
+        <tr>
+            <td>Areia 20kg</td>
+            <td>R$30,00</td>
+        </tr>
+        <tr>
+            <td>Tintas Suvinil</td>
+            <td>R$120,00</td>
+        </tr>
+        <tr>
+            <td>Bloco Cerâmico</td>
+            <td>R$0,95</td>
+        </tr>
+        <tr>
+            <td>Manta Liquida</td>
+            <td>R$269,00</td>
+        </tr>
+        <tr>
+            <td>Protetor de Piso</td>
+            <td>R$194,00</td>
+        </tr>
+    </table>
+
+    
+    
+    <h2> Formulário de Solicitação</h2>
+    <form>
+        <label for="nome">Nome do Solicitante:</label>
+        <input type="nome" id="nome" name="nome" placeholder="digite seu nome" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="digite seu email" required>
+
+        <label for="telefone">Telefone:</label>
+        <input type="tel" id="nome" name="nome" placeholder="digite seu telefone" required>
+
+        <label for="endereco">Endereço:</label>
+        <input type="endereco" id="endereco" name="endereco" placeholder="digite seu endereco" required>
+
+        <label for="rg">RG:</label>
+        <input type="rg" id="rg" name="rg" placeholder="digite seu RG" oninput="this.value=this.value.replace(/\D/g,'')" maxlength="9" required>
+
+        <label for="cpf">CPF:</label>
+        <input type="cpf" id="cpf" name="cpf" placeholder="digite seu CPF" oninput="this.value=this.value.replace(/\D/g,'')" maxlength="11" required>
+
+        <label for="data">Data de Nascimento:</label>
+        <input type="date" id="data" name="data" placeholder="digite seu nascimento" min="1940-01-01" max="2025-12-31"required/> 
+
+        
+        <h3>Escolha os Materiais</h3>
+
+        <div class="material-item"> Telha
+            <input type="number" name="quantidade_Telha" min="1" value="0">
+        </div>
+
+        <div class="material-item"> Areia 20kg
+            <input type="number" name="quantidade_Areia" min="1" value="0">
+        </div>
+
+        <div class="material-item"> Tintas Suvinil
+            <input type="number" name="quantidade_Tintas" min="1" value="0">
+        </div>
+
+        <div class="material-item"> Bloco Cerâmico
+            <input type="number" name="quantidade_Bloco" min="1" value="0">
+        </div>
+
+        <div class="material-item"> Manta Liquida
+            <input type="number" name="quantidade_Manta" min="1" value="0">
+        </div>
+
+        <div class="material-item"> Protetor de Piso
+            <input type="number" name="quantidade_Protetor" min="1" value="0">
+        </div>
+
+        <label for="mensagem">Mensagem(opcional):</label>
+
+    <textarea id="mensagem" name="mensagem" rows="4" cols="50">
+    
+    </textarea>
+
+        <div class="center-button">
+        <input type="submit" value="Enviar Solicitação">
+        </div>
+    </form>
+</body>
+</html>
